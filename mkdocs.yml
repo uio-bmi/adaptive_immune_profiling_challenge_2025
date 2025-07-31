@@ -1,0 +1,50 @@
+site_name: "AIRR-ML-25: Adaptive Immune Profiling Challenge"
+
+theme:
+  name: material
+  toc: false # This line disables the right-side table of contents
+  features:
+    - navigation.tabs # Enables top-level menu items as tabs
+    - navigation.sections # Displays sections (headings) of the current page in the left sidebar as a table of contents
+    - search.highlight # Highlights search results
+    - search.suggest # Suggests search terms
+    - content.code.copy # Adds a copy button to code blocks (useful if you include code snippets)
+    - content.tabs # Allows for tabbed content within markdown files
+    - toc.integrate # Integrates the table of contents into the sidebar
+  palette:
+    - scheme: default # Default light theme
+      toggle:
+        icon: material/brightness-4 # Icon for switching to dark mode
+        name: Switch to dark mode
+    - scheme: slate # Dark theme
+      toggle:
+        icon: material/brightness-7 # Icon for switching to light mode
+        name: Switch to light mode
+  font:
+    text: Inter # Modern, readable font for body text
+    code: Fira Code # Monospaced font for code blocks
+  icon:
+    logo: material/trophy-award # A suitable icon for your site's logo in the header
+
+nav:
+  - Overview & Timeline: index.md # Now combines Overview and Timeline
+  - Prizes: prizes.md # Now combines Monetary Rewards and Scientific manuscript authorship
+  - Further details: further_details.md # Now combines Description, Evaluation, Additional resources, Acknowledgements, Citation
+
+markdown_extensions:
+  - pymdownx.highlight: # For syntax highlighting of code blocks
+      anchor_linenums: true
+      linenums: true
+      noclasses: true
+  - pymdownx.inlinehilite # For inline code highlighting
+  - pymdownx.snippets # For including content from other files (useful for consolidating)
+  - admonition # For creating callout blocks (e.g., Note, Warning, Tip)
+  - pymdownx.details # For collapsible details blocks
+  - pymdownx.superfences # Enhanced code blocks
+  - attr_list # Allows adding HTML attributes to markdown elements
+  - md_in_html # Allows using markdown syntax within raw HTML blocks
+  - toc: # Table of Contents extension (this is for the markdown parser, not the theme's sidebar)
+      permalink: true # Adds a permalink icon next to headings
+      toc_depth: 3 # Includes headings up to level 3 in the table of contents
+
+# Removed extra_css as it's no longer needed for this purpose
