@@ -10,10 +10,10 @@ In this competition, you’ll develop machine learning models to simultaneously 
 
 ## Timeline
 
-- **September 01, 2025** - Start Date.
-- **September 15, 2025** - Entry Deadline. You must accept the competition rules before this date in order to compete.
-- **September 15, 2025** - Team Merger Deadline. This is the last day participants may join or merge teams.
-- **October 12, 2025** - Final Submission Deadline.
+- **November 01, 2025** - Start Date.
+- **November 15, 2025** - Entry Deadline. You must accept the competition rules before this date in order to compete.
+- **November 15, 2025** - Team Merger Deadline. This is the last day participants may join or merge teams.
+- **December 12, 2025** - Final Submission Deadline.
 
 All deadlines are at 11:59 PM UTC on the corresponding day unless otherwise noted. The competition organizers reserve the right to update the contest timeline if they deem it necessary.
 
@@ -21,7 +21,7 @@ All deadlines are at 11:59 PM UTC on the corresponding day unless otherwise note
 
 ## How to Participate
 
-The competition is open to everyone, and will be hosted on the popular **Kaggle** platform. All you need to do is create a Kaggle account, accept the competition rules, and start coding! The competition will be live on September 01 at the following URL: [https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025](https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025).
+The competition is open to everyone, and will be hosted on the popular **Kaggle** platform. All you need to do is create a Kaggle account, accept the competition rules, and start coding! The competition will be live on December 01 at the following URL: [https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025](https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025).
 
 
 
