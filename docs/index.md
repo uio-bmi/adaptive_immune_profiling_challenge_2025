@@ -21,7 +21,7 @@ All deadlines are at 11:59 PM UTC on the corresponding day unless otherwise note
 
 ## How to Participate
 
-The competition is open to everyone, and will be hosted on the popular **Kaggle** platform. All you need to do is create a Kaggle account, accept the competition rules, and start coding! The competition will be live on December 01 at the following URL: [https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025](https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025).
+The competition is open to everyone, and will be hosted on the popular **Kaggle** platform. All you need to do is create a Kaggle account, accept the competition rules, and start coding! The competition will be live on November 01 at the following URL: [https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025](https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025).
 
 
 
