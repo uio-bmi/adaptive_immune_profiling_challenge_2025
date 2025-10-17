@@ -27,9 +27,9 @@ theme:
     logo: material/trophy-award # A suitable icon for your site's logo in the header
 
 nav:
-  - Overview & Timeline: index.md # Now combines Overview and Timeline
-  - Prizes: prizes.md # Now combines Monetary Rewards and Scientific manuscript authorship
-  - Further details: further_details.md # Now combines Description, Evaluation, Additional resources, Acknowledgements, Citation
+  - "": index.md # Now combines Overview and Timeline
+#  - Prizes: prizes.md # Now combines Monetary Rewards and Scientific manuscript authorship
+#  - Further details: further_details.md # Now combines Description, Evaluation, Additional resources, Acknowledgements, Citation
 
 markdown_extensions:
   - pymdownx.highlight: # For syntax highlighting of code blocks
@@ -48,3 +48,8 @@ markdown_extensions:
       toc_depth: 3 # Includes headings up to level 3 in the table of contents
 
 # Removed extra_css as it's no longer needed for this purpose
+extra_javascript:
+  - js/timer.js
+
+extra_css:
+  - css/timer.css
