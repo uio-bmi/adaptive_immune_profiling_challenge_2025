@@ -1,59 +1,73 @@
-<script>
-  // --- FORM SUBMISSION SCRIPT ---
-  // This function is now called directly by the button's onclick event
-  function handleSubscriptionSubmit() {
-    const form = document.getElementById('subscribe-form');
-    const submitButton = document.getElementById('submit-button');
-    const successMessage = document.getElementById('success-message');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Immune Profiling Challenge 2025</title>
+  </head>
+<body>
 
-    // Make sure all elements exist
-    if (!form || !submitButton || !successMessage) {
-      console.error("Form elements not found!");
-      return;
+  {{ content }}
+
+
+  <script>
+    // --- FORM SUBMISSION SCRIPT ---
+    // This function is called by the button's onclick event in your markdown file
+    function handleSubscriptionSubmit() {
+      const form = document.getElementById('subscribe-form');
+      const submitButton = document.getElementById('submit-button');
+      const successMessage = document.getElementById('success-message');
+
+      if (!form || !submitButton || !successMessage) {
+        console.error("Form elements not found!");
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.innerText = 'Submitting...';
+
+      const formData = new FormData(form);
+      const action = "https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse";
+
+      fetch(action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(formData)
+      }).then(() => {
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+      }).catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+        submitButton.disabled = false;
+        submitButton.innerText = 'Subscribe';
+      });
     }
 
-    submitButton.disabled = true;
-    submitButton.innerText = 'Submitting...';
-
-    const formData = new FormData(form);
-    const action = "https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse";
-
-    fetch(action, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: new URLSearchParams(formData)
-    }).then(() => {
-      form.style.display = 'none';
-      successMessage.style.display = 'block';
-    }).catch(error => {
-      console.error('Error:', error);
-      alert('An error occurred. Please try again.');
-      submitButton.disabled = false;
-      submitButton.innerText = 'Subscribe';
+    // --- COUNTDOWN TIMER SCRIPT ---
+    // This waits for the page to be ready
+    document.addEventListener('DOMContentLoaded', function() {
+      const countdownElement = document.getElementById('timer');
+      if (countdownElement) {
+        const launchDate = new Date('2025-11-05T00:00:00Z').getTime();
+        const interval = setInterval(function() {
+          const now = new Date().getTime();
+          const distance = launchDate - now;
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          if (distance < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = "Challenge has launched!";
+          } else {
+            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+          }
+        }, 1000);
+      }
     });
-  }
+  </script>
 
-  // --- COUNTDOWN TIMER SCRIPT ---
-  // This can still wait for the page to load
-  document.addEventListener('DOMContentLoaded', function() {
-    const countdownElement = document.getElementById('timer');
-    if (countdownElement) {
-      const launchDate = new Date('2025-11-05T00:00:00Z').getTime();
-      const interval = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = launchDate - now;
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        if (distance < 0) {
-          clearInterval(interval);
-          countdownElement.innerHTML = "Challenge has launched!";
-        } else {
-          countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-      }, 1000);
-    }
-  });
-</script>
+</body>
+</html>
