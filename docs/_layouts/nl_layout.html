@@ -1,32 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Page Title</title>
-  </head>
-<body>
-
-  {{ content }}
-
-  <script>
-    // --- 1. COUNTDOWN TIMER SCRIPT ---
-    function startCountdown() {
-      const countdownElement = document.getElementById('timer');
-      // Set the date for the launch (November 5, 2025, UTC)
+<script>
+  // --- 1. COUNTDOWN TIMER SCRIPT ---
+  function startCountdown() {
+    const countdownElement = document.getElementById('timer');
+    // Ensure the timer element exists before trying to use it
+    if (countdownElement) {
       const launchDate = new Date('2025-11-05T00:00:00Z').getTime();
 
       const interval = setInterval(function() {
         const now = new Date().getTime();
         const distance = launchDate - now;
 
-        // Time calculations
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result
         if (distance < 0) {
           clearInterval(interval);
           countdownElement.innerHTML = "Challenge has launched!";
@@ -35,40 +23,45 @@
         }
       }, 1000);
     }
-    // Start the countdown when the page loads
-    startCountdown();
+  }
+  // Run the countdown function when the page loads
+  startCountdown();
 
 
-    // --- 2. EMAIL FORM SUBMISSION SCRIPT ---
-    const form = document.getElementById('subscribe-form');
+  // --- 2. EMAIL FORM SUBMISSION SCRIPT ---
+  const form = document.getElementById('subscribe-form');
+
+  // Check if the form actually exists on the page before adding a listener
+  if (form) {
     const submitButton = document.getElementById('submit-button');
     const successMessage = document.getElementById('success-message');
 
-    if (form) { // Check if the form exists on the page
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        submitButton.disabled = true;
-        submitButton.innerText = 'Submitting...';
-        
-        const formData = new FormData(form);
-        const action = "https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse";
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Stop the default browser submission
+      
+      submitButton.disabled = true;
+      submitButton.innerText = 'Submitting...';
+      
+      const formData = new FormData(form);
+      // THIS IS THE CORRECT GOOGLE FORMS URL
+      const action = "https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse";
 
-        fetch(action, {
-          method: 'POST',
-          mode: 'no-cors',
-          body: new URLSearchParams(formData)
-        }).then(() => {
-          form.style.display = 'none';
-          successMessage.style.display = 'block';
-        }).catch(error => {
-          console.error('Error:', error);
-          alert('An error occurred. Please try again.');
-          submitButton.disabled = false;
-          submitButton.innerText = 'Subscribe';
-        });
+      // THIS SENDS THE DATA IN THE BACKGROUND
+      fetch(action, {
+        method: 'POST',         // Use POST method
+        mode: 'no-cors',        // Required for Google Forms
+        body: new URLSearchParams(formData) // Data goes in the body
+      }).then(() => {
+        // Success
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+      }).catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+        submitButton.disabled = false;
+        submitButton.innerText = 'Subscribe';
       });
-    }
-  </script>
-
-</body>
-</html>
+    });
+  }
+</script>
