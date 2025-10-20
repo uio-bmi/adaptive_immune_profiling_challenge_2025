@@ -140,10 +140,10 @@ Link to come: A pre-registered protocol describing all the details of the compet
 - [A platform for ML on adaptive immune repertoires with a wide collection of encodings and ML methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC10312379/)
 
 ---
-<form id="subscribe-form">
+<form id="subscribe-form" onsubmit="return false;">
   <label for="email-input">Email:</label>
   <input id="email-input" type="email" name="entry.163367855" required placeholder="your.email@example.com">
-  <button type="submit" id="submit-button">Subscribe</button>
+  <button type="button" id="submit-button" onclick="handleSubscriptionSubmit()">Subscribe</button>
   <p id="success-message" style="display:none;">Thank you for subscribing!</p>
 </form>
 ---
