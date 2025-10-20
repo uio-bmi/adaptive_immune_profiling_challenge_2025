@@ -1,7 +1,3 @@
----
-layout: nl_layout
----
-
 <h2 style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
   <span>Overview</span>
   <span id="launch-countdown" style="text-align: right; font-size: 0.9rem; line-height: 1.3;">
@@ -140,12 +136,41 @@ Link to come: A pre-registered protocol describing all the details of the compet
 - [A platform for ML on adaptive immune repertoires with a wide collection of encodings and ML methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC10312379/)
 
 ---
-<form id="subscribe-form">
-  <label for="email-input">Email:</label>
-  <input id="email-input" type="email" name="entry.163367855" required placeholder="your.email@example.com">
-  <button type="submit" id="submit-button">Subscribe</button>
-  <p id="success-message" style="display:none; color:green;">Thank you for subscribing!</p>
-</form>
+
+## 📧 Stay Updated
+
+<!-- Page updated: 2025-10-20 20:39 -->
+
+Don't miss any important updates about the challenge! Subscribe to our newsletter for:
+
+- **Competition announcements** and timeline updates
+- **Technical insights** and tips from organizers  
+- **Community highlights** and participant spotlights
+- **Results and findings** from the challenge
+
+<div class="newsletter-container">
+  <div class="newsletter-header">
+    <h3>🚀 Join the Challenge Community</h3>
+    <p>Get exclusive updates delivered to your inbox</p>
+  </div>
+  <form id="subscribe-form" class="newsletter-form">
+    <div class="input-group">
+      <input id="email-input" type="email" name="entry.163367855" required placeholder="your.email@example.com" class="email-input">
+      <button type="submit" id="submit-button" class="subscribe-btn">Subscribe</button>
+    </div>
+    <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+  </form>
+  <div id="success-message" class="success-message" style="display:none;">
+    <div class="success-content">
+      <span class="success-icon">✅</span>
+      <div>
+        <strong>Thank you for subscribing!</strong>
+        <p>You'll receive updates about the Adaptive Immune Profiling Challenge 2025.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 ---
 
 

@@ -12,15 +12,18 @@
 
   <script>
     // --- FORM SUBMISSION SCRIPT ---
-    // This function is called by the button's onclick event in your markdown file
-    function handleSubscriptionSubmit() {
+    // This function is called by the form's onsubmit event
+    function handleSubscriptionSubmit(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
       const form = document.getElementById('subscribe-form');
       const submitButton = document.getElementById('submit-button');
       const successMessage = document.getElementById('success-message');
 
       if (!form || !submitButton || !successMessage) {
         console.error("Form elements not found!");
-        return;
+        return false;
       }
 
       submitButton.disabled = true;
@@ -42,6 +45,8 @@
         submitButton.disabled = false;
         submitButton.innerText = 'Subscribe';
       });
+      
+      return false;
     }
 
     // --- COUNTDOWN TIMER SCRIPT ---
