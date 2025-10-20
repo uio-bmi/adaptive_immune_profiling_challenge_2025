@@ -1,8 +1,41 @@
 <script>
-  // Wait for the entire page to be ready before running any code
+  // --- FORM SUBMISSION SCRIPT ---
+  // This function is now called directly by the button's onclick event
+  function handleSubscriptionSubmit() {
+    const form = document.getElementById('subscribe-form');
+    const submitButton = document.getElementById('submit-button');
+    const successMessage = document.getElementById('success-message');
+
+    // Make sure all elements exist
+    if (!form || !submitButton || !successMessage) {
+      console.error("Form elements not found!");
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.innerText = 'Submitting...';
+
+    const formData = new FormData(form);
+    const action = "https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse";
+
+    fetch(action, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new URLSearchParams(formData)
+    }).then(() => {
+      form.style.display = 'none';
+      successMessage.style.display = 'block';
+    }).catch(error => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+      submitButton.disabled = false;
+      submitButton.innerText = 'Subscribe';
+    });
+  }
+
+  // --- COUNTDOWN TIMER SCRIPT ---
+  // This can still wait for the page to load
   document.addEventListener('DOMContentLoaded', function() {
-    
-    // --- 1. COUNTDOWN TIMER SCRIPT ---
     const countdownElement = document.getElementById('timer');
     if (countdownElement) {
       const launchDate = new Date('2025-11-05T00:00:00Z').getTime();
@@ -21,37 +54,6 @@
           countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
       }, 1000);
-    }
-
-    // --- 2. EMAIL FORM SUBMISSION SCRIPT ---
-    const form = document.getElementById('subscribe-form');
-    if (form) {
-      const submitButton = document.getElementById('submit-button');
-      const successMessage = document.getElementById('success-message');
-
-      form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Stop the default browser submission
-        
-        submitButton.disabled = true;
-        submitButton.innerText = 'Submitting...';
-        
-        const formData = new FormData(form);
-        const action = "https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse";
-
-        fetch(action, {
-          method: 'POST',
-          mode: 'no-cors',
-          body: new URLSearchParams(formData)
-        }).then(() => {
-          form.style.display = 'none';
-          successMessage.style.display = 'block';
-        }).catch(error => {
-          console.error('Error:', error);
-          alert('An error occurred. Please try again.');
-          submitButton.disabled = false;
-          submitButton.innerText = 'Subscribe';
-        });
-      });
     }
   });
 </script>
