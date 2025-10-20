@@ -137,6 +137,21 @@ Link to come: A pre-registered protocol describing all the details of the compet
 
 ---
 
+<h2>Subscribe to our Newsletter</h2>
+<p>Get updates on the AIRR-ML-2025 Challenge!</p>
+
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse" method="post" target="_blank">
+  
+  <label for="email-input">Email:</label>
+  <input id="email-input" type="email" name="entry.163367855" required placeholder="your.email@example.com">
+  
+  <button type="submit">Subscribe</button>
+
+</form>
+
+---
+
+
 ### Acknowledgements
 
 Adaptive Biotechnologies has generously provided ~ 500 unpublished TCRβ repertoires from a cohort of donors with known status with respect to HSV-2 infection.
