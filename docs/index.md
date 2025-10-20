@@ -137,17 +137,50 @@ Link to come: A pre-registered protocol describing all the details of the compet
 
 ---
 
-<h2>Subscribe to our Newsletter</h2>
-<p>Get updates on the AIRR-ML-2025 Challenge!</p>
-
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse" method="post" target="_blank">
-  
+<form id="subscribe-form">
   <label for="email-input">Email:</label>
   <input id="email-input" type="email" name="entry.163367855" required placeholder="your.email@example.com">
-  
-  <button type="submit">Subscribe</button>
-
+  <button type="submit" id="submit-button">Subscribe</button>
+  <p id="success-message" style="display:none;">Thank you for subscribing!</p>
 </form>
+
+<script>
+  const form = document.getElementById('subscribe-form');
+  const submitButton = document.getElementById('submit-button');
+  const successMessage = document.getElementById('success-message');
+
+  form.addEventListener('submit', function(e) {
+    // Prevent the default form submission behavior
+    e.preventDefault();
+
+    // Disable the button to prevent multiple submissions
+    submitButton.disabled = true;
+    submitButton.innerText = 'Submitting...';
+
+    // Create a FormData object from the form
+    const formData = new FormData(form);
+    // The action URL from your form
+    const action = "https://docs.google.com/forms/d/e/1FAIpQLSd8UEgzxZRVmvB2CxH05iZe-JotLhh2xroc1PPoq4xld_6WcA/formResponse";
+
+    // Use the Fetch API to send the data
+    fetch(action, {
+      method: 'POST',
+      mode: 'no-cors', // This is important to avoid CORS errors with Google Forms
+      body: new URLSearchParams(formData)
+    }).then(() => {
+      // This part runs after the data is sent.
+      // We assume it was successful because 'no-cors' prevents us from seeing the response.
+      form.style.display = 'none'; // Hide the form
+      successMessage.style.display = 'block'; // Show the success message
+    }).catch(error => {
+      // This will only catch network errors, not issues with the form submission itself
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+      submitButton.disabled = false; // Re-enable the button
+      submitButton.innerText = 'Subscribe';
+    });
+  });
+</script>
 
 ---
 
