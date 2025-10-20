@@ -52,7 +52,40 @@ Competition prizes are kindly sponsored by The Research Council of Norway.
 
 ### Scientific manuscript authorship
 
-Top 10 performing participants on the final Leaderboard rankings will be invited to contribute their model descriptions, related discussions, and code to a scientific paper summarizing the competition's scientific outcome. 
+Top 10 performing participants on the final Leaderboard rankings will be invited to contribute their model descriptions, related discussions, and code to a scientific paper summarizing the competition's scientific outcome. ***Nature Methods*** has "accepted in principle" to publish this work.
+
+---
+
+## Organizers
+
+Many awesome people have contributed to making this community challenge happen including:
+
+Chakravarthi Kanduri<sup>1,2</sup>, Thomas Konstantinovsky<sup>3,†</sup>, Puneet Rawat<sup>4,†</sup>, Milena Pavlovic<sup>1,2</sup>, Damon H. May<sup>5</sup>, Rebecca Elyanow<sup>5</sup>, Bryan Howie<sup>5</sup>, Harlan S. Robins<sup>5</sup>, Crina Curca<sup>6</sup>, Bryan Hariadi<sup>6</sup>, Ashwath Kumar<sup>6</sup>, Jose Jacob<sup>6</sup>, Efthymia Papalexi<sup>6</sup>, Charles Roco<sup>6</sup>, Alex Rosenberg<sup>6</sup>, AIRR-Community Machine Learning Working Group, Justin Barton<sup>7</sup>, Günter Klambauer<sup>8</sup>, Encarnita Mariotti-Ferrandiz<sup>9</sup>, Pieter Meysman<sup>10</sup>, Eline T. Luning Prak<sup>11</sup>, Lindsay G. Cowell<sup>12</sup>, Todd M. Brusko<sup>13,14,15</sup>, Gur Yaari<sup>3,16,‡</sup>, Victor Greiff<sup>4,17,‡</sup>, Geir Kjetil Sandve<sup>1,2,‡</sup>
+
+<sup>1</sup> Scientific Computing and Machine Learning section, Department of Informatics, University of Oslo, Norway  
+<sup>2</sup> UiORealArt Convergence Environment, University of Oslo, Norway  
+<sup>3</sup> Faculty of Engineering and Bar Ilan Institute of Nanotechnology and Advanced Materials, Bar-Ilan University, Israel  
+<sup>4</sup> Department of Immunology, University of Oslo, Oslo, Norway  
+<sup>5</sup> Adaptive Biotechnologies, Seattle, WA, USA  
+<sup>6</sup> Parse Biosciences, Seattle, WA, USA  
+<sup>7</sup> Institute of Structural and Molecular Biology, University of London, United Kingdom  
+<sup>8</sup> Institute for Machine Learning, Johannes Kepler University Linz, Austria  
+<sup>9</sup> Sorbonne Université, INSERM, UMRS959, Immunology-Immunopathology-Immunotherapy (i3) lab, Paris, France  
+<sup>10</sup> Adrem Data Lab, Department of Computer Science, University of Antwerp, Belgium  
+<sup>11</sup> Department of Pathology and Laboratory Medicine, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA  
+<sup>12</sup> Department of Health Data Science and Biostatistics, Peter O'Donnell Jr. School of Public Health; Department of Immunology, School of Biomedical Sciences; UT Southwestern Medical Center, Dallas, TX, USA  
+<sup>13</sup> Department of Pathology, Immunology, and Laboratory Medicine, Diabetes Institute, College of Medicine, University of Florida, Gainesville, FL, USA  
+<sup>14</sup> Department of Pediatrics, College of Medicine, University of Florida, Gainesville, FL, USA  
+<sup>15</sup> Department of Biochemistry and Molecular Biology, College of Medicine, University of Florida, Gainesville, FL, USA  
+<sup>16</sup> Department of Pathology, Yale School of Medicine, New Haven, CT, USA  
+<sup>17</sup> Imprint Labs, LLC, New York, NY, USA
+
+<sup>†</sup> Equal contribution  
+<sup>‡</sup> Equal contribution
+
+**Correspondence:** geirksa@ifi.uio.no, victor.greiff@medisin.uio.no, gur.yaari@yale.edu
+
+***Note:*** The contributors list shown above does not reflect the final list of authors, and authorship order, for the scientific manuscript summarizing the competition's scientific outcome. As described above, the top 10 performing participants on the final Leaderboard rankings will be invited to contribute to this manuscript and become co-authors.
 
 ---
 
