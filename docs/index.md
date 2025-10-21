@@ -87,6 +87,9 @@ Chakravarthi Kanduri<sup>1,2</sup>, Thomas Konstantinovsky<sup>3,†</sup>, Pune
 
 ***Note:*** The contributors list shown above does not reflect the final list of authors, and authorship order, for the scientific manuscript summarizing the competition's scientific outcome. As described above, the top 10 performing participants on the final Leaderboard rankings will be invited to contribute to this manuscript and become co-authors.
 
+Thanks to the AIRR-community for the shared vision and collective perspective in organizing this challenge.
+![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F14003908%2F0dacf4334b09a9327eb3b1548fbd2497%2FAIRR_logo_rasterized_400px-removebg-preview.png?generation=1761037894151861&alt=media)
+
 ---
 
 ## Further details
