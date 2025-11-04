@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Timer functionality
   const timerEl = document.getElementById("timer");
   if (timerEl) {
-    const targetDate = new Date("2025-11-05T00:00:00Z").getTime();
+    const targetDate = new Date("2025-11-05T07:00:00Z").getTime();
 
     function updateTimer() {
       const now = new Date().getTime();
