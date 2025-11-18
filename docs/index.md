@@ -15,8 +15,6 @@ In this competition, you’ll develop machine learning models to simultaneously 
 ## Timeline
 
 - **November 05, 2025** - Start Date. (opens at 08:00 AM CET)
-- **November 19, 2025** - Entry Deadline. You must accept the competition rules before this date in order to compete.
-- **November 19, 2025** - Team Merger Deadline. This is the last day participants may join or merge teams.
 - **December 17, 2025** - Final Submission Deadline (closes at 07:59 AM CET).
 
 All deadlines are at 11:59 PM CET on the corresponding day unless otherwise noted. The competition organizers reserve the right to update the contest timeline if they deem it necessary.
